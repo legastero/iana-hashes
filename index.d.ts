@@ -16,5 +16,6 @@ declare module 'iana-hashes' {
     export function getHashes(): Array<string>;
     export function createHash(algorithm: string): Hash;
     export function createHmac(algorithm: string, key: string|Buffer): Hmac;
+    export function randomBytes(length: number): Buffer;
 }
 

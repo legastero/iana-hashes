@@ -1,5 +1,6 @@
 var createHash = require('create-hash');
 var createHmac = require('create-hmac');
+var randomBytes = require('randombytes');
 var getHashes = require('./lib/get-hashes');
 
 var mapping = {
@@ -41,3 +42,8 @@ exports.createHmac = function (algorithm, key) {
     }
     return createHmac(algorithm, key);
 };
+
+exports.randomBytes = function (length) {
+    return randomBytes(length);
+};
+
